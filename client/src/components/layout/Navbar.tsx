@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -18,18 +18,18 @@ export default function Navbar() {
     <header className="fixed w-full bg-background/80 backdrop-blur-sm z-50 border-b">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5 text-xl font-bold">
+          <a href="#" className="-m-1.5 p-1.5 text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             Bhadresh
           </a>
         </div>
-        
+
         {/* Desktop menu */}
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
+              className="text-sm font-semibold leading-6 text-custom-black hover:text-primary transition-colors"
             >
               {item.name}
             </a>
@@ -52,7 +52,7 @@ export default function Navbar() {
                       key={item.name}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-muted rounded-lg"
+                      className="block px-3 py-2 text-base font-semibold leading-7 text-custom-black hover:bg-muted rounded-lg"
                     >
                       {item.name}
                     </a>
