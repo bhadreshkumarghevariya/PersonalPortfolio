@@ -12,7 +12,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-custom-black">
             Bhadresh Ghevariya
           </h1>
           <p className="text-xl sm:text-2xl text-custom-black mb-8">
@@ -21,8 +21,8 @@ export default function Hero() {
           <p className="text-lg max-w-2xl mx-auto mb-12 text-muted-foreground">
             Specializing in building scalable web applications with React, Node.js, and modern technologies
           </p>
-          <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity">
-            <a href="#contact">
+          <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 transition-colors">
+            <a href="#contact" className="flex items-center">
               Get in Touch
               <ArrowDown className="ml-2 h-4 w-4" />
             </a>
