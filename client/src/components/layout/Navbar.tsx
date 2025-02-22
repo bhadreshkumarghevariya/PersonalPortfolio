@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="fixed w-full bg-background/80 backdrop-blur-sm z-50 border-b">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5 text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+          <a href="#" className="-m-1.5 p-1.5 text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent border-solid border-gradient-primary border-4">
             Bhadresh
           </a>
         </div>
