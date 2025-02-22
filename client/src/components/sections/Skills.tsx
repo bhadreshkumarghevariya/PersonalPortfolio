@@ -18,7 +18,7 @@ export default function Skills() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-primary bg-clip-text text-transparent">Skills</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-custom-black">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {Object.entries(skills).map(([category, items]) => (
             <Card key={category} className="border-none shadow-lg hover:shadow-xl transition-shadow">
@@ -28,7 +28,10 @@ export default function Skills() {
                   {items.map((skill) => (
                     <Badge 
                       key={skill} 
-                      className="bg-gradient-primary text-white hover:opacity-90 transition-opacity"
+                      className="border-2 border-transparent bg-white text-custom-black hover:text-primary transition-colors"
+                      style={{
+                        borderImage: 'linear-gradient(90deg, #8744AD 0%, #0067E5 100%) 1',
+                      }}
                     >
                       {skill}
                     </Badge>

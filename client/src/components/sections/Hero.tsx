@@ -15,7 +15,7 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Bhadresh Ghevariya
           </h1>
-          <p className="text-xl sm:text-2xl text-custom-black-75 font-medium mb-8">
+          <p className="text-xl sm:text-2xl text-custom-black mb-8">
             Software Engineer | Full Stack Developer
           </p>
           <p className="text-lg max-w-2xl mx-auto mb-12 text-muted-foreground">
