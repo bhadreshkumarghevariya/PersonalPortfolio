@@ -1,20 +1,6 @@
 {
-  "variant": "professional",
+  "variant": "tint",
   "primary": "hsl(213 100% 45%)",
   "appearance": "light",
-  "radius": 0.5,
-  "colors": {
-    "gradient": {
-      "from": "hsl(275 45% 47%)",
-      "to": "hsl(213 100% 45%)"
-    },
-    "black": {
-      "DEFAULT": "#25292F",
-      "75": "#5C5F63",
-      "25": "#C9CACB",
-      "10": "#E9EAEA",
-      "5": "#F4F4F5"
-    },
-    "error": "#E53900"
-  }
+  "radius": 1
 }
