@@ -69,7 +69,7 @@ export default function Experience() {
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary">
+                    <Badge key={tech} variant="gradient">
                       {tech}
                     </Badge>
                   ))}
