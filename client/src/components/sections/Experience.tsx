@@ -6,29 +6,35 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce application with product catalog, shopping cart, and secure payment integration.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveLink: "#",
+    title: "ProSystemz - Custom PC Builder E-commerce Platform",
+    description: "A full-stack e-commerce platform offering a user-friendly experience for custom PC assembly with intelligent compatibility checking.",
+    period: "May 2023 - Sep 2023",
+    organization: "Conestoga College",
+    technologies: ["React.js", "Node.js", "MongoDB", "GraphQL", "Stripe"],
     githubLink: "https://github.com/bhadreshkumarghevariya",
     achievements: [
-      "Implemented responsive UI using React and Tailwind CSS",
-      "Built RESTful API endpoints with Node.js and Express",
-      "Integrated Stripe payment gateway for secure transactions",
-      "Implemented user authentication and authorization"
+      "Developed a full-stack e-commerce platform using ReactJS, Node.js and MongoDB for custom PC assembly",
+      "Implemented an intelligent compatibility check system to ensure hardware compatibility",
+      "Employed Agile methodology and Trello for project management",
+      "Integrated Stripe for secure payment processing",
+      "Optimized performance with lazy loading and GraphQL",
+      "Gained experience in cloud deployment processes"
     ]
   },
   {
-    title: "Task Management System",
-    description: "A collaborative task management application with real-time updates and team collaboration features.",
-    technologies: ["React", "Firebase", "Material-UI"],
-    liveLink: "#",
+    title: "SCMS - Supply Chain Management Software",
+    description: "A comprehensive supply chain management solution with automated processes and efficient inventory management.",
+    period: "Jan 2021 - Jun 2021",
+    organization: "Uka Tarsadia University",
+    technologies: ["PHP", "JSX", "MySQL", "Bootstrap", "CSS"],
     githubLink: "https://github.com/bhadreshkumarghevariya",
     achievements: [
-      "Developed real-time data synchronization using Firebase",
-      "Implemented drag-and-drop task organization",
-      "Created team collaboration features",
-      "Built responsive design for mobile and desktop"
+      "Developed SCMS using PHP, JSX and MySQL",
+      "Implemented a responsive user interface with Bootstrap and CSS",
+      "Collaborated with team members using GitHub for efficient project management",
+      "Optimized database queries for inventory and supplier data management",
+      "Automated key supply chain processes including notifications and report generation",
+      "Enhanced operational efficiency through intelligent design and functionality"
     ]
   }
 ];
@@ -50,22 +56,16 @@ export default function Experience() {
                 <div className="flex flex-wrap justify-between items-start gap-4 mb-4">
                   <div>
                     <h3 className="text-xl font-semibold">{project.title}</h3>
+                    <p className="text-muted-foreground mt-1">{project.organization}</p>
+                    <p className="text-muted-foreground">{project.period}</p>
                     <p className="text-muted-foreground mt-2">{project.description}</p>
                   </div>
-                  <div className="flex gap-2">
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                        <Link className="h-4 w-4 mr-2" />
-                        Demo
-                      </a>
-                    </Button>
-                  </div>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-2" />
+                      View Code
+                    </a>
+                  </Button>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
@@ -76,7 +76,9 @@ export default function Experience() {
                 </div>
                 <ul className="list-disc pl-6 space-y-2">
                   {project.achievements.map((achievement, i) => (
-                    <li key={i}>{achievement}</li>
+                    <li key={i} className="text-muted-foreground">
+                      {achievement}
+                    </li>
                   ))}
                 </ul>
               </CardContent>

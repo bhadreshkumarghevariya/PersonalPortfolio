@@ -1,0 +1,41 @@
+ProjectsProjects
+ProSystemz
+ProSystemz
+May 2023 - Sep 2023May 2023 - Sep 2023
+Conestoga College logo
+Associated with Conestoga College
+Associated with Conestoga College
+● Developed ProSystemz, a full-stack e-commerce platform using ReactJS, Node.js and
+MongoDB, offering a user-friendly experience for custom PC assembly.
+● Faced with the challenge of ensuring hardware compatibility, I Implemented an
+intelligent compatibility check system, ensuring users can assemble PCs with
+confidence, avoiding hardware conflicts.
+● Employed Agile methodology and used Trello for project management, ensuring
+iterative development, clear task management and effective team collaboration.
+● Integrated Stripe for secure payment processing, enhancing the platform’s reliability and
+user trust.
+● Optimized performance with advanced techniques like lazy loading and GraphQL,
+improving load times and user experience.
+● Gained experience in cloud deployment processes, preparing the project for future
+scalability and accessibility.● Developed ProSystemz, a full-stack e-commerce platform using ReactJS, Node.js and MongoDB, offering a user-friendly experience for custom PC assembly. ● Faced with the challenge of ensuring hardware compatibility, I Implemented an intelligent compatibility check system, ensuring users can assemble PCs with confidence, avoiding hardware conflicts. ● Employed Agile methodology and used Trello for project management, ensuring iterative development, clear task management and effective team collaboration. ● Integrated Stripe for secure payment processing, enhancing the platform’s reliability and user trust. ● Optimized performance with advanced techniques like lazy loading and GraphQL, improving load times and user experience. ● Gained experience in cloud deployment processes, preparing the project for future scalability and accessibility.
+React.js, JavaScript and +3 skills
+SCMS | Supply Chain Management Software (MVP)
+SCMS | Supply Chain Management Software (MVP)
+Jan 2021 - Jun 2021Jan 2021 - Jun 2021
+Uka Tarsadia University  logo
+Associated with Uka Tarsadia University 
+Associated with Uka Tarsadia University 
+● Developed SCMS, a Supply Chain Management Software, using PHP, JSX and MySQL.
+● Implemented a responsive and user-friendly interface with Bootstrap and CSS, ensuring
+seamless usability across devices.
+● Collaborated with team members using GitHub, ensuring efficient project management and
+seamless code integration.
+● Optimized database management with MySQL, Efficiently handling complex queries
+related to inventory, orders and supplier data.
+● Automated key supply chain processes, enhancing operational efficiency and reducing
+manual work through intelligent design and functionality.
+● Automated key supply chain processes, including notifications and report generation,
+reducing manual tasks and enhancing overall productivity within the distribution network● Developed SCMS, a Supply Chain Management Software, using PHP, JSX and MySQL. ● Implemented a responsive and user-friendly interface with Bootstrap and CSS, ensuring seamless usability across devices. ● Collaborated with team members using GitHub, ensuring efficient project management and seamless code integration. ● Optimized database management with MySQL, Efficiently handling complex queries related to inventory, orders and supplier data. ● Automated key supply chain processes, enhancing operational efficiency and reducing manual work through intelligent design and functionality. ● Automated key supply chain processes, including notifications and report generation, reducing manual tasks and enhancing overall productivity within the distribution network
+PHP, SQL and +2 skills
+Other contributorsOther contributors
+
