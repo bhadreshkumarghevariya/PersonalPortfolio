@@ -7,6 +7,36 @@ import { cn } from "@/lib/utils";
 import { navItems, siteConfig } from "@/lib/site";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { Button } from "@/components/ui/button";
+import type { NavItem } from "@/lib/site";
+
+/**
+ * In-page section links (href contains "#") render as plain anchors so the
+ * browser handles the scroll directly. Using Next's <Link> for hash targets
+ * triggers a failing RSC payload fetch ("Failed to fetch RSC payload for
+ * /#contact"). Real routes (e.g. /blog) keep client-side <Link> navigation.
+ */
+function NavLink({
+  item,
+  className,
+  onNavigate,
+}: {
+  item: NavItem;
+  className: string;
+  onNavigate?: () => void;
+}) {
+  if (item.href.includes("#")) {
+    return (
+      <a href={item.href} className={className} onClick={onNavigate}>
+        {item.label}
+      </a>
+    );
+  }
+  return (
+    <Link href={item.href} className={className} onClick={onNavigate}>
+      {item.label}
+    </Link>
+  );
+}
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,13 +70,11 @@ export function Navbar() {
 
         <div className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => (
-            <Link
+            <NavLink
               key={item.href}
-              href={item.href}
+              item={item}
               className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {item.label}
-            </Link>
+            />
           ))}
           <div className="ml-1">
             <ThemeToggle />
@@ -71,14 +99,12 @@ export function Navbar() {
         <div className="border-t border-border bg-background/95 backdrop-blur-md md:hidden">
           <div className="mx-auto flex max-w-5xl flex-col px-5 py-2 sm:px-6">
             {navItems.map((item) => (
-              <Link
+              <NavLink
                 key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
+                item={item}
+                onNavigate={() => setOpen(false)}
                 className="rounded-md px-2 py-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {item.label}
-              </Link>
+              />
             ))}
           </div>
         </div>

@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -67,6 +68,7 @@ export default function RootLayout({
           >
             Skip to content
           </a>
+          <SmoothScroll />
           <Navbar />
           <main id="main">{children}</main>
           <Footer />
