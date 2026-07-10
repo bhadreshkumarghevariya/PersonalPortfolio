@@ -1,0 +1,67 @@
+---
+title: "Building a Home SOC Lab with Wazuh: Detecting SSH Brute-Force"
+date: "2025-01-15"
+summary: "How I stood up a single-node Wazuh SIEM on Ubuntu Server and validated a full detection pipeline — from raw SSH auth logs to a correlated brute-force alert mapped to MITRE ATT&CK T1110."
+tags: ["Home Lab", "Wazuh", "MITRE ATT&CK", "Detection"]
+draft: false
+---
+
+Standing up a home SOC lab is the single highest-signal thing an aspiring analyst
+can do. It turns "I've read about SIEMs" into "I've ingested logs, tuned rules,
+and triaged my own simulated attacks." Here's the lab behind my
+[SOC projects](/#projects).
+
+## Goals
+
+- Run a real SIEM end to end on hardware I control
+- Ingest and analyze **SSH authentication logs** from a Linux host
+- Detect **brute-force activity** and distinguish it from ordinary noise
+- Map what I see to **MITRE ATT&CK** and triage it like a Tier 1 analyst
+
+## The build
+
+I deployed a **single-node Wazuh stack** — indexer, manager, and dashboard — on a
+self-provisioned **Ubuntu Server** host, configured for headless remote
+administration. To reach it safely I used a **WireGuard-based mesh VPN
+(Tailscale)** so that **no ports are exposed to the public internet**.
+
+## Simulating the attack
+
+With telemetry flowing, I generated an SSH brute-force against the host and
+watched the pipeline light up: log collection → rule matching → alert
+correlation.
+
+```bash
+# Repeated failed auth attempts against the lab host (over the VPN)
+for i in $(seq 1 20); do
+  ssh baduser@lab-host   # wrong credentials, on purpose
+done
+```
+
+## Single failure vs. a real attack
+
+The interesting part is **correlation**. A lone failed login is background noise;
+a burst of them is an attack. Wazuh models this with rule levels:
+
+- **Level 5** — a single authentication failure (informational)
+- **Level 10** — many failures correlated into a brute-force pattern (actionable)
+
+That correlated, higher-severity alert maps to **MITRE ATT&CK
+[T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/)** under Credential
+Access.
+
+## Triaging like Tier 1
+
+When the alert fires, I triage it the way a SOC analyst would — pulling the facts
+that decide what happens next:
+
+- **Source IP** of the attempts
+- **Targeted account**
+- **Technique** (T1110) and severity
+- Whether it's a single source or distributed, and whether any attempt succeeded
+
+## Why it matters
+
+This lab is small on purpose. The value isn't the size — it's the repeatable loop:
+**generate activity → observe the logs → write/verify a detection → triage the
+alert.** Everything on this site's [writeups](/blog) follows that same shape.
