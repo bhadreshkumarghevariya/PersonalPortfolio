@@ -6,8 +6,8 @@ export const siteConfig = {
   // Short value proposition shown in hero + meta description.
   tagline:
     "SOC-focused security analyst — CompTIA Security+ certified, with hands-on detection from a self-built Wazuh SIEM lab. I turn raw logs into triaged, actionable alerts.",
-  // Update to the production domain once confirmed on Vercel.
-  url: "https://bhadresh.dev",
+  // Production domain (apex redirects to www on Vercel).
+  url: "https://www.bhadreshghevariya.com",
   location: "Toronto, ON, Canada",
   openToWork: true,
   email: "bhadreshkumarghevariya@gmail.com",
